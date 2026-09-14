@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 本地聊天数据库同步器",
+  "version": "0.4.0",
+  "description": "供 AI 自动将当前账号的 ChatGPT 可见聊天同步到本机 SQLite。",
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "http://127.0.0.1:17891/*"
+  ],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

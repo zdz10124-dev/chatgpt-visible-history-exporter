@@ -1,0 +1,8 @@
+chatgpt_history.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+ai_edge_profile_test/
+__pycache__/
+*.pyc
+exports/
+*.log
